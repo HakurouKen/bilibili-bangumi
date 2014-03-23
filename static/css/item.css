@@ -1,0 +1,123 @@
+@charset "UTF-8";
+@import url(reset.css);
+div.container {
+  width: 600px; }
+  div.container div.day {
+    margin-bottom: 40px; }
+    div.container div.day div.day-title {
+      width: 545px;
+      padding-top: 20px;
+      margin: auto;
+      font-size: 30px;
+      text-shadow: 0 0 2px #000;
+      border-bottom: 2px solid rgba(126, 126, 126, 0.75);
+      -webkit-box-shadow: 2px 9px 5px -7px #000;
+      -moz-box-shadow: 2px 9px 5px -7px #000;
+      box-shadow: 2px 9px 5px -7px #000; }
+    div.container div.day ul.bangumi {
+      width: 450px;
+      margin: auto; }
+      div.container div.day ul.bangumi li.bangumi-item {
+        display: inline-block;
+        vertical-align: top; }
+        div.container div.day ul.bangumi li.bangumi-item div.bangumi-container {
+          width: 150px;
+          position: relative; }
+          div.container div.day ul.bangumi li.bangumi-item div.bangumi-container span.update {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            left: 132px;
+            top: -4px;
+            font-size: 18px;
+            background-color: #E26BA4;
+            text-align: center;
+            color: #FFF;
+            border-radius: 15px; }
+          div.container div.day ul.bangumi li.bangumi-item div.bangumi-container span.update:after {
+            content: "N"; }
+          div.container div.day ul.bangumi li.bangumi-item div.bangumi-container div.preview {
+            height: 128px;
+            width: 128px;
+            border-right: 1px solid #333333;
+            border-bottom: 1px solid #333333;
+            border-top: 1px solid rgba(33, 33, 33, 0.6);
+            border-left: 1px solid rgba(33, 33, 33, 0.6);
+            box-shadow: 2px 2px 6px #333;
+            border-radius: 10px;
+            margin: 10px 10px 6px 10px; }
+            div.container div.day ul.bangumi li.bangumi-item div.bangumi-container div.preview img {
+              height: 128px;
+              width: 128px;
+              border-radius: 9px; }
+          div.container div.day ul.bangumi li.bangumi-item div.bangumi-container div.preview:after {
+            content: "";
+            position: absolute; }
+          div.container div.day ul.bangumi li.bangumi-item div.bangumi-container div.title {
+            text-align: center;
+            font-size: 15px;
+            color: #333333;
+            text-shadow: 0px 0px 2px #333333; }
+          div.container div.day ul.bangumi li.bangumi-item div.bangumi-container div.count {
+            text-align: center;
+            font-size: 12px;
+            padding-top: 3px;
+            color: #777777;
+            text-shadow: 0px 0px 2px #777777; }
+        div.container div.day ul.bangumi li.bangumi-item div.bangumi-container.unsubscribe {
+          opacity: 0.7; }
+      div.container div.day ul.bangumi li.bangumi-item.non-sub.show {
+        opacity: 0.4; }
+      div.container div.day ul.bangumi li.bangumi-item.non-sub.hide {
+        display: none; }
+    div.container div.day p.no-content {
+      margin-bottom: -5px;
+      padding-top: 20px;
+      text-align: center; }
+    div.container div.day p.no-content:after {
+      content: "暂无订阅";
+      line-height: 30px;
+      font-size: 30px;
+      text-align: center;
+      color: #333;
+      text-shadow: 0 0 2px rgba(51, 51, 51, 0.45);
+      opacity: 0.4; }
+  div.container a.toogle {
+    position: fixed;
+    top: 70px;
+    left: 540px;
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+    background: #116EC4;
+    color: #FFF;
+    font-size: 100%;
+    text-decoration: none;
+    text-shadow: 0 0 2px #FFF;
+    box-shadow: 1px 2px 8px #384958;
+    opacity: 0.9; }
+
+p.total {
+  float: right;
+  margin-top: -20px;
+  padding: 15px 30px;
+  font-size: 100%;
+  color: #333;
+  text-shadow: 0 0 2px #333; }
+
+div.loading {
+  display: block;
+  width: 300px; }
+  div.loading a.loading-icon {
+    display: block;
+    width: 190px;
+    height: 14px;
+    background-image: url("../img/loading.gif");
+    margin: auto;
+    margin-top: 20px; }
+  div.loading p {
+    margin: 10px auto;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    text-shadow: 0 0 1px #333; }

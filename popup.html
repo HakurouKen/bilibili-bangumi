@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bangumi_subscribe" ng-csp>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="./static/css/item.css">
+</head>
+<body ng-controller="bangumi_sub">
+	<div class="container" ng-show="bangumi.count">
+		<div class="day" ng-repeat="day in bangumi.weekday">
+			<div class="day-title" ng-bind="day.name"></div>
+			<ul class="bangumi">
+				<li class="bangumi-item" ng-repeat="info in day.list" ng-class="{'non-sub':info.sub==false, show:status , hide:!status}" ng-click="toogle(this)">
+					<div class="bangumi-container">
+						<span class="update" ng-if="info.new"></span>
+						<div class="preview">
+							<img ng-src="{{info.cover}}" alt="{{info.title}}">
+						</div>
+						<div class="title" ng-bind="info.title"></div>
+						<div class="count">更新到<b ng-bind="info.bgmcount"></b>话</div>
+					</div>
+				</li>
+			</ul>
+			<p class="no-content" ng-if="!day.sub && !status"></p>
+		</div>
+		<a href="#" class="toogle" ng-click="toogleStatus()"></a>
+		<p class="total">共有新番<b ng-bind="{{bangumi.count}}"></b>部</p>
+	</div>
+	<div class="loading" ng-if="!bangumi.count">
+		<a class="loading-icon"></a>
+		<p>正在加载中...</p>
+	</div>
+	<script src="static/js/angularjs-1.2.9.min.js"></script>
+	<script src="static/js/init.js"></script>
+</body>
+</html>

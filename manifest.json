@@ -1,0 +1,21 @@
+{
+	"manifest_version": 2,
+
+	"name":"bilibili bangumi",
+	"description": "bilibili bangumi",
+	"version": "0.1",
+
+	"browser_action":{
+		"default_popup": "popup.html"
+	},
+
+	"web_accessible_resources": [
+		"static/*"
+	],
+	"background":{
+		"page":"background.html"
+	},
+	"permissions":[
+		"http://api.bilibili.tv/"
+	]
+}
